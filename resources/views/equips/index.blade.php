@@ -3,7 +3,7 @@
 @section('title', "Llistat d'Equips")
 
 @section('content')
-<h1 class="text-3xl font-bold text-blue-800 mb-6">Llistat d'Equips</h1>
+<h1 class="text-3xl font-bold text-blue-800 mb-6">Llistat d'Eadawdfawfawf</h1>
 <table class="w-full border-collapse border border-gray-300">
     <thead class="bg-gray-200">
     <tr>
