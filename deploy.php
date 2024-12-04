@@ -15,6 +15,10 @@ host('54.146.156.5')
     ->set('remote_user', 'sa04-deployer')
     ->set('deploy_path', '/var/www/es-cipfpbatoi-deployer/html');
 
+task('artisan:migrate', function () {
+    writeln('Tarea artisan:migrate deshabilitada.');
+});
+
 task('vite:build', function () {
     run('cd {{release_path}} && npm install && npm run build');
 });
