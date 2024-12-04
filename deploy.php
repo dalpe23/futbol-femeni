@@ -15,10 +15,6 @@ host('54.146.156.5')
     ->set('remote_user', 'sa04-deployer')
     ->set('deploy_path', '/var/www/es-cipfpbatoi-deployer/html');
 
-task('artisan:migrate', function () {
-    writeln('Tarea artisan:migrate deshabilitada.');
-});
-//Tarea personalizada para compilar activos con Vite
 task('vite:build', function () {
     run('cd {{release_path}} && npm install && npm run build');
 });
@@ -30,5 +26,5 @@ task('reload:php-fpm', function () {
 
 after('deploy:vendors', 'vite:build');
 after('deploy:failed', 'deploy:unlock');
-after('deploy:vendors', 'artisan:storage:link'); // Crea enlaces simbólicos en storage
+after('deploy:vendors', 'artisan:storage:link');
 after('deploy', 'reload:php-fpm');
